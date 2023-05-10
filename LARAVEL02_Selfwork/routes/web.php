@@ -23,7 +23,17 @@ Route::get('/azienda', function () {
 });
 
 Route::get('/destinazioni', function () {
-    return view('destinazioni');
+
+    $destinazioni = [
+        'Roma', 
+        'Milano', 
+        'Bari', 
+        'Amsterdam', 
+        'Napoli', 
+        'Praga'
+    ];
+
+    return view('destinazioni', ['destinazioni' => $destinazioni]);
 });
 
 Route::get('/contatti', function () {
